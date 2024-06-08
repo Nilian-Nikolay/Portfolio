@@ -1,0 +1,900 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #111621;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+
+  margin-left: 7%;
+  margin-right: 7%;
+}
+a{
+  text-decoration: none;
+}
+
+.header-btn{
+  display: flex;
+  position: fixed;
+  /* flex-wrap: wrap; */
+  gap: 10px;
+  z-index: 100;
+  
+  justify-content: center;
+  align-items: flex-start;
+  left: 0;   
+  right: 0;  
+  margin: auto; 
+
+
+  
+}
+
+.hd-btn{
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 20px;
+  color: #a677d4;
+  font-weight: 800;
+  margin-top: 10px;
+  background-color: #65479edc;
+  border: 1px solid #9655d6;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+
+
+
+
+.hd-btn {
+  position: relative;
+  display: inline-block;
+}
+
+.navigation {
+  position: absolute; /* Позиционируем .navigation абсолютно относительно последнего родителя с position: relative, т.е. .hd-btn */
+  width: 100%; /* Чтобы .navigation занимала всю ширину кнопки */
+  top: 100%; /* Позиционируем непосредственно под кнопкой */
+  left: 57.5%; /* Выравниваем по левому краю кнопки */
+  z-index: 100000; /* Убедимся, что меню будет поверх других элементов */
+}
+
+.navigation .dropdown-menu {
+  display: none;
+}
+
+
+
+
+
+/* .hd-btn:nth-child(7){
+  box-shadow: 0px -20px 90px 0px #00ff084d;
+}
+.hd-btn:nth-child(5){
+  box-shadow: 0px -20px 90px 0px #ff00556c;
+}
+.hd-btn:nth-child(3),   /*кнопка "Главная" 
+.hd-btn:nth-child(4){   /*кнопка "Обо мне" 
+  box-shadow: 0px -20px 90px 0px #fffb0065;
+} */
+
+
+.hd-btn:hover{
+  background-color: #9555d66e;
+  color: #b99bf0;
+  transition: 0.3s;
+}
+
+
+
+
+
+
+/* выпадающее меню */
+
+/* Стилизация кнопки и выпадающего меню */
+
+
+
+/* .navigation {
+  position: relative;
+  display: inline-block;
+}
+.navigation:hover .dropdown-menu {
+  display: block;
+} */
+
+.nav-button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+
+  background-color: #563a8cb7;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 30px;
+}
+
+.dropdown-menu a {
+  color: #dbb7ff;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 13px;
+  padding: 12px 16px;
+  /* text-decoration: none; */
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #9555d6;
+  color: #b99bf0;
+  transition: 0.1s;
+  border-radius: 30px;
+}
+
+/* Показать выпадающее меню при наведении */
+
+
+
+
+
+/* модальное окно */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 10; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modal-content {
+  background-color: #9555d6ec;
+  color: #e5eeff;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+
+  margin: 5% auto; /* 15% от верха и по центру */
+  padding: 20px;
+  border: 3px solid #543275;
+  border-radius: 30px;
+  width: 40%; 
+  
+}
+.close {
+  color: #ffffff;
+  float: right;
+  font-size: 48px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.email{
+  background-color: #9555d6;
+  border: 3px solid #633b8b;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.email-btn:hover{
+  background-color: #633b8b;
+  color: #9555d6;
+  transition: 0.3s;
+}
+.email::placeholder { 
+  color: #e5eeff; 
+  font-style: italic; 
+}
+.social-btn{
+  text-decoration: none;
+}
+.social-btn-img:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+
+
+
+
+
+
+/*Полосы фона*/
+.masked-background {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: 
+    linear-gradient(0deg, #161e2e 1px, transparent 1px),
+    linear-gradient(90deg, #161e2e 1px, transparent 1px);
+  background-size: 100px 100px;
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 65%, transparent 100%);
+  z-index: -100;
+}
+
+
+
+.title {
+  margin-top: 140px;
+  color: #E5EEFF;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 70px;
+  font-weight: 800;
+  width: 504px;
+}
+
+.title p {
+  margin-top: 5px; /* Уменьшаем верхний отступ */
+  margin-bottom: 5px; /* Уменьшаем нижний отступ */
+}
+.title-2 {
+  text-align: right;
+  color: #9655d6;
+}
+
+
+
+
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* gap: 10px; */
+  /* width: 200%; */
+  flex-wrap: wrap;
+  
+}
+
+.avatar {
+  border-radius: 50%;
+
+}
+
+
+
+/* @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"); */
+
+.ring {
+  margin-top: 140px;
+  margin-left: 25px;
+  position: relative;
+  max-width: 400px;
+  max-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ring i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff;
+  transition: 0.5s;
+}
+.ring i:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite;
+}
+.ring i:nth-child(2) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate 4s linear infinite;
+}
+.ring i:nth-child(3) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate2 10s linear infinite;
+}
+.ring:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+.stack-title-1,
+.stack-title-2{
+  color: #E5EEFF;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 35px;
+  font-weight: 800;
+
+}
+.stack-title-1{
+  margin-top: 200px;
+  text-align: center;
+}
+.stack-items{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.stack-item {
+  position: relative; 
+  background-color: #fff;
+  border-radius: 100px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 0;
+  
+}
+.stack-item:hover{
+  background-color: #663795;
+  color: #a27beb;
+  
+  /* transition: 0.9s; */
+  z-index: 0;
+  box-shadow: 0 0 20px #77549b;
+  scale: 1.1;
+  
+}
+/* .stack-items{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stack-item {
+  position: relative; 
+  background-color: #fff;
+  border-radius: 100px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 0;
+  
+}
+.stack-item:hover{
+  background-color: #663795;
+  color: #a27beb;
+  
+  transition: 0.2s;
+  z-index: 0;
+  box-shadow: 0 0 20px #77549b;
+
+}
+
+.stack-item.highlight-prev::after {
+  background-color: #77549b; 
+}
+
+.stack-item.highlight-next::after {
+  background-color: #77549b; 
+}
+
+.stack-item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 30vh; 
+  height: 2px;
+  background-color: #aaa9a94d;
+  z-index: -1;
+  transform-origin: left center; 
+  transition: background-color 0.1s ease-in-out;
+}
+
+.stack-item:nth-child(1)::after,
+.stack-item:nth-child(3)::after,
+.stack-item:nth-child(5)::after {
+  transform: rotate(41deg); 
+}
+.stack-item:nth-child(2)::after,
+.stack-item:nth-child(4)::after {
+  transform: rotate(-41deg); 
+}
+
+.stack-item:last-child::after {
+  display: none;
+} */
+
+.title-item{
+  color: #000000;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 17.5px;
+  font-weight: 800;
+  /* margin-top: 200px; */
+  margin-bottom: -1px;
+
+}
+.st1,
+.st3,
+.st5{
+  margin-top: 0px;
+}
+.st2,
+.st4,
+.st6{
+  margin-top: 210px;
+}
+
+
+/*------------------*/
+.project-container {
+  width: 700px; /* или другая ширина, которая вам нужна */
+  overflow: hidden; /* Скрывает часть изображения, выходящую за границы контейнера */
+}
+
+.project {
+  max-height: 320px; /* Ограничение высоты контейнера */
+  overflow-y: auto; /* Включает вертикальный скролл */
+  margin-top: 35px;
+}
+
+.project img {
+  width: 100%; /* Ширина изображения равна ширине контейнера */
+  display: block; /* Убирает лишние отступы вокруг изображения */
+  cursor: pointer;
+}
+
+.cont-project-1{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+
+
+.stack-title-3,
+.stack-title-4{
+  color: #E5EEFF;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.stack-title-3{
+  margin-top: 60px;
+  font-size: 28px;
+  font-weight: 800;
+}
+.stack-title-4{
+
+  font-size: 21px;
+  font-weight: 800;
+  max-width: 420px;
+}
+
+.project-button{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 50px;
+
+}
+/* .project-button a {
+  text-decoration: none; 
+} */
+.project-btn{
+  background-color: #65479e2d;
+  border: 1px solid #9655d6;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 20px;
+  color: #9555d6a7;
+  font-weight: 800;
+  margin-right: 50px;
+
+  
+}
+.project-btn-stack{
+  border-radius: 100px;
+  background-color: #65479e2d;
+  border: 1px solid #9655d6;
+  cursor: pointer;
+  
+}
+.project-btn-stack:hover,
+.project-btn:hover{
+  background-color: #9555d66e;
+  color: #a27beb;
+  transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 200%; /*    100*количество элементов    */
+  transition: transform 0.5s ease;
+  align-items: center;
+}
+
+.carousel-item {
+  width: 50%; /* 100 / количество элементов */
+  flex-shrink: 0;
+  flex-grow: 1; /* Карусель занимает всё доступное пространство между кнопками */
+  /* display: flex; */
+  transition: transform 0.5s ease;
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+  flex-shrink: 0; /* Кнопки не сжимаются и не растягиваются */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.prev-1 {
+  margin-right: 30px;
+
+  transform: rotate(180deg);
+
+}
+
+
+
+
+
+.svg{
+  position: absolute;
+}
+.geometric-shapes,
+.top-right {
+  position: absolute;
+  top: 0;  /* Или другое значение, в зависимости от того, где вы хотите разместить фигуры */
+  right: 10;  /* Или другое значение */
+  z-index: 10; /* Убедитесь, что фигуры находятся над другими элементами */
+}
+
+.svg{
+  /* position: relative; */
+  width: 20%;
+  height: 30%;
+  z-index: -1;
+}
+.svg-left{
+  rotate: 10deg;
+  left: -40%;
+  position: absolute;
+}
+.svg-right{
+  rotate: -185deg;
+  left: -155%;
+  top: 21%;
+  position: absolute;
+}
+
+
+
+/*-------------------------*/
+/*-------------------------*/
+/*pet-js*/
+
+.container-project-2{
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-wrap: wrap;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.btn-js-projects{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  /* gap: 10vh; */
+  margin-bottom: 35px;
+}
+
+.btn-js{
+  background-color: #65479e2d;
+  border: 1px solid #9655d6;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #9555d6a7;
+  font-weight: 800;
+  font-size: 20px;
+  /* margin-right: 50px; */
+  
+  text-align: center;
+  margin-top: 10px;
+  width: 245px;
+}
+.btn-js:hover{
+  background-color: #9555d66e;
+  color: #a27beb;
+  transition: 0.1s;
+}
+.btn-js.active {
+  background-color: #7844ac; /* Измените цвет фона для активной кнопки */
+  color: rgb(255, 255, 255); /* Измените цвет текста для активной кнопки */
+}
+
+.project-2{
+  /* padding-left: 49px; */
+  /* margin-left: 49px; */
+  /* border-left: 1px solid #9655d6; */
+
+  /* display: none; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.project-img-js{
+  margin-top: 40px;
+  /* margin-left: 49px;
+  margin-top: 35px; */
+  /* overflow-x: auto; */
+  max-width: 700px;
+  height: auto;
+}
+.project-2-img{
+  width: 100%;
+  height: 100%;
+  
+}
+
+.dabble-js{
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Страница обо мне*/
+
+.about-text{
+  position: relative;
+  
+  color: #E5EEFF;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  margin-top: 100px;
+}
+
+.about-img{
+  position: absolute;
+  z-index: -10;
+  top: -15%;
+  right: -1%;
+  /* opacity: 0.5; */
+}
+
+
+/*бургер*/
+.menu{
+  margin-top: 15px;
+  position: relative;
+  width: 65px;
+  height: 50px;
+  background-color: transparent;
+  cursor: pointer;
+
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.menu span{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 10px;
+
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+
+  transition: 0.5s;
+}
+.menu span:nth-child(1){
+  top: 0;
+  transform-origin: left center;
+}
+.menu span:nth-child(2){
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+.menu span:nth-child(3){
+  top: 100%;
+  transform: translateY(-100%);
+  transform-origin: left center;
+}
+input:checked ~ label 
+span:nth-child(1){
+  top: 0;
+  left: 10px;
+  transform: rotate(45deg);
+}
+input:checked ~ label 
+span:nth-child(2){
+  width: 0;
+  opacity: 0;
+}
+input:checked ~ label 
+span:nth-child(3){
+  top: 47px;
+  left: 10px;
+  transform: rotate(-45deg);
+}
+@media (max-width: 1095px) {
+
+  .contact-btn .hd-btn {
+    width: 100%;
+    padding: 20px;
+    font-size: 30px;
+    
+  }
+
+
+
+  .contact-btn{
+    
+    background-color: #3c3842;
+    padding: 10px;
+    border-radius: 40px;
+    width: 80%;
+    height: 50vh;
+    right: 0;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    /* align-items: flex-end; */
+    /* display: none; */
+  }
+  .navigation {
+    /* position: absolute; */
+    top: 10%; /* Расположение непосредственно под кнопкой */
+    left: 0;
+    /* font-size: 30px; */
+    /* width: 100; */
+    /* z-index: 1001; Убедитесь, что z-index достаточно высок */
+    
+  }
+  .menu{
+    display: initial;
+  }
+  #menu:checked ~ .contact-btn{
+    display: flex;
+    
+
+  }
+  #menu:checked ~ #dropdownButton{
+    display: none;
+  } 
+  .header-btn {
+    display:flex;
+    flex-direction: row-reverse;
+  }
+}
+
+
+
+
+
+@media (max-width: 1095px) {
+  .ring{
+    margin: 25px;
+  }
+
+
+
+
+
+}
+/*--------*/
+@media (max-width: 440px) {
+  .ring i:nth-child(1) {
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate 6s linear infinite;
+  }
+  .ring i:nth-child(2) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate 4s linear infinite;
+  }
+  .ring i:nth-child(3) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate2 10s linear infinite;
+  }
+  .ring:hover i {
+    border: 6px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+  }
+}
+
+
+@media (max-width: 586px) {
+  .title {
+    margin-top: 80px;
+  }
+
+
+}

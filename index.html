@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      
+      <div class="header-btn">
+        
+        
+        
+        
+        
+        <input type="checkbox" id="menu" class="menu">
+        <label for="menu" class="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+        <button id="dropdownButton" class="hd-btn" onclick="toggleDropdown()">Навигация</button>
+        <div class="navigation">
+          <div class="dropdown-menu">
+            <a href="#stack-skills">Навыки</a>
+            <a href="#layout">Верстка</a>
+            <a href="#js">JS</a>
+            <a href="#">Ссылка 4</a>
+          </div>
+        </div>
+        
+
+
+
+        <div class="contact-btn">
+          <button class="hd-btn" id="contactButton"; >Связаться</button>
+        
+        
+          <div id="contactModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Связаться со мной</h2>
+              
+              <!-- Форма для ввода email -->
+              <form action="/submit-your-email-address" method="post">
+                <!-- <label for="email">Ваш Email:</label> -->
+                <input class="email" type="email" id="email" name="email" required placeholder="Email">
+                <button class="email email-btn" type="submit">Отправить</button>
+              </form>
+              <p>Или</p>
+              <div class="social">
+                
+                <a class="social-btn" href="https://t.me/OxError404">
+                  <img class="social-btn-img"src="img/social/tg.png" width="50" height="50" alt="">
+                </a>
+                <a class="social-btn" href="https://vk.com/0xerror404">
+                  <img class="social-btn-img" src="img/social/vk.png" width="50" height="50" alt="">
+                </a>
+              </div>
+  
+  
+            </div>
+          </div>
+  
+          <button class="hd-btn" onclick="window.open('about.html');">Обо мне</button>
+        
+        
+        </div>
+        
+
+
+        
+      
+      </div>
+    
+    </div>
+  
+  </header>
+
+
+  <div class="masked-background"></div>
+  <div class="container">
+
+    <div class="info">
+      
+      <div class="title">
+        <p class="title-1">Горохов</p>
+        <p class="title-2">Николай</p>
+        <p class="title-3">Frontend-dev</p>
+      </div>
+
+      <div class="ring">
+        <i style="--clr:#00ff0a;"></i>
+        <i style="--clr:#ff0057;"></i>
+        <i style="--clr:#fffd44;"></i>
+        <div class="ava">
+          <a href="#"> 
+            <img class='avatar'src="img/1.jpg" width="300" height="300">
+          </a>
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="svg">
+      <!-- <img src="img/svg/square.svg" alt=""> -->
+      <img class="svg-left" src="img/svg/sircle.svg" alt="">
+      <!-- <svg class="top-right" width="219" height="147" viewBox="0 0 219 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect opacity="0.18" x="10.4252" y="75.8326" width="7.50168" height="7.50168" transform="rotate(110.283 10.4252 75.8326)" fill="#686868" stroke="white" stroke-width="1.22683" />
+        <rect opacity="0.18" x="180.869" y="138.825" width="7.50168" height="7.50168" transform="rotate(110.283 180.869 138.825)" fill="#686868" stroke="white" stroke-width="1.22683" />
+        <rect x="69.4713" y="-91.84" width="180.485" height="180.485" transform="rotate(20.2832 69.4713 -91.84)" stroke="white" stroke-opacity="0.1" stroke-width="1.22683" />
+      </svg>
+  
+      <svg class="geometric-shapes" width="550" height="110" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="10" width="70" height="100" transform="rotate(45 10 10)" fill="none" stroke="#686868" stroke-opacity="0.3" stroke-width="1"/>
+        <rect x="140" y="10" width="50" height="50" transform="rotate(45 140 10)" fill="none" stroke="#686868" stroke-opacity="0.3" stroke-width="1"/>
+      </svg> -->
+
+    </div>
+
+
+    <div class="stack">
+      <div class="stack-title">
+        <p class="stack-title-1" id="stack-skills">Мои навыки</p>
+      </div>
+
+      <div class="stack-items">
+
+        <div data-aos="zoom-in" class="stack-item st1">
+          <img src="img/stack/html.png" width="40" height="60" alt="">
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="150" class="stack-item st2">
+          <img src="img/stack/css.png" width="40" height="60" alt="">
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="250" class="stack-item st3">
+          <img src="img/stack/sass.png" width="60" height="60" alt="">
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="350" class="stack-item st4">
+          <img src="img/stack/js.png" width="50" height="60" alt="">
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="450" class="stack-item st5">
+          <img src="img/stack/bt.png" width="60" height="60" alt="">
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="550" class="stack-item st6">
+          <img src="img/stack/gh.png" width="60" height="60" alt="">
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="projects">
+      <div class="stack-title">
+        <p class="stack-title-1">Проекты</p>
+        <p class="stack-title-2" id="layout">Верстка</p>
+      </div>
+
+
+
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="project-1">
+        
+              <div class="cont-project-1">
+                <div class="title-project">
+                  <p class="stack-title-3">1/2 Ресторан</p>
+                  <p class="stack-title-4">Сайт сделаннный по макету Figma c использованием html, css</p>
+                
+                  <div class="project-button">
+                    <a href="https://github.com/Nikolay-Gorhov/restoran">
+                      <div class="project-btn">Посмотреть</div>
+                    </a>
+                    <div class="project-btn-stack">
+                      <a href="https://github.com/Nikolay-Gorhov/restoran">
+                        <img src="img/stack/gh.png" width="55" height="50" alt="">
+                      </a>
+                    </div>
+                  </div>
+      
+                </div>
+                
+      
+                <div class="project-container">
+                  <div class="project">
+                    <a href="https://github.com/Nikolay-Gorhov/restoran">
+                      <img src="img/rest.png" alt="Что то не так с картинкой">
+                    </a>
+                  </div>
+                </div>
+      
+              </div>
+              
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="project-1">
+        
+              <div class="cont-project-1">
+                <div class="title-project">
+                  <p class="stack-title-3">2/2 Агенство</p>
+                  <p class="stack-title-4">Сайт полностью на bootstrap</p>
+                
+                  <div class="project-button">
+                    <a href="https://github.com/Nikolay-Gorhov/restoran">
+                      <div class="project-btn">Посмотреть</div>
+                    </a>
+                    <div class="project-btn-stack">
+                      <a href="https://github.com/Nikolay-Gorhov/restoran">
+                        <img src="img/stack/gh.png" width="55" height="50" alt="">
+                      </a>
+                    </div>
+                  </div>
+      
+                </div>
+                
+      
+                <div class="project-container">
+                  <div class="project">
+                    <a href="https://github.com/Nikolay-Gorhov/restoran">
+                      <img src="img/travel.png" alt="Что то не так с картинкой">
+                    </a>
+                  </div>
+                </div>
+      
+              </div>
+              
+              
+            </div>
+          </div>
+        </div>
+        <div class="carousel-control-prev">
+
+          <div class="svg">
+            <img class="svg-right" src="img/svg/square.svg" alt="">
+          </div>
+
+          <img class="prev-1" src="img/prev1.png" height="100" width="100" alt="">
+          <img  src="img/prev1.png" height="100" width="100" alt="">
+        </div>
+        <div class="carousel-control-next">
+        </div>
+
+
+
+
+        
+      </div>
+
+
+      
+      <div class="stack-title-2" id="js">Pet-проекты JS</div>
+      
+      <div class="container-project-2">
+        <div class="btn-js-projects">
+          
+          <div class="dabble-js">
+            <a href="#slider-content">
+              <div class="btn-js slider" onclick="showContent('slider-content', this)">slider</div>
+            </a>
+            <a href="#drag-drop-content">
+              <div class="btn-js drag-drop" onclick="showContent('drag-drop-content', this)">drag-drop</div>
+            </a>
+         
+          </div>
+          
+          <div class="dabble-js">
+            <a href="#color-content">
+              <div class="btn-js color" onclick="showContent('color-content', this)">change color</div>
+            </a>
+            <a href="#changeText-content">
+              <div class="btn-js changeText" onclick="showContent('changeText-content', this)">change Text</div>
+            </a>
+            
+          </div>
+          
+          <div class="dabble-js">
+            <a href="#to-do-content">
+              <div class="btn-js to-do" onclick="showContent('to-do-content', this)">to-do</div>
+            </a>
+            <a href="#calculator-content">
+              <div class="btn-js calculator" onclick="showContent('calculator-content', this)">calculator</div>
+            </a>
+          </div>
+  
+        </div>
+  
+        <div id="slider-content" class="project-2">
+          <div class="title-project">
+            <p class="stack-title-3">slider</p>
+            <p class="stack-title-4">Сайт сделаннный по макету Figma c использованием html, css</p>
+          
+            <div class="project-button">
+              <a href="https://github.com/Nikolay-Gorhov/restoran">
+                <div class="project-btn">Посмотреть</div>
+              </a>
+              <div class="project-btn-stack">
+                <a href="https://github.com/Nikolay-Gorhov/restoran">
+                  <img src="img/stack/gh.png" width="55" height="50" alt="">
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="project-img-js">
+            <a href="https://github.com/Nikolay-Gorhov/restoran">
+              <img id="slider" class="project-2-img" src="img/js/slider.png" alt="Что то не так с картинкой">
+            </a>
+          </div>
+
+        </div>
+
+
+
+        <div id="drag-drop-content" class="project-2">
+          <div class="title-project">
+            <p class="stack-title-3">drag-drop</p>
+            <p class="stack-title-4">Сайт сделаннный по макету Figma c использованием html, css</p>
+          
+            <div class="project-button">
+              <a href="https://github.com/Nikolay-Gorhov/restoran">
+                <div class="project-btn">Посмотреть</div>
+              </a>
+              <div class="project-btn-stack">
+                <a href="https://github.com/Nikolay-Gorhov/restoran">
+                  <img src="img/stack/gh.png" width="55" height="50" alt="">
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="project-img-js">
+            <a href="https://github.com/Nikolay-Gorhov/restoran">
+              <img class="project-2-img" src="img/js/drag-drop.png" alt="Что то не так с картинкой">
+            </a>
+          </div>
+
+        </div>
+
+
+        <div id="color-content" class="project-2" style="display:none;">
+          <div class="title-project">
+            <p class="stack-title-3">change color</p>
+            <p class="stack-title-4">Сайт сделаннный по макету Figma c использованием html, css</p>
+          
+            <div class="project-button">
+              <a href="https://github.com/Nikolay-Gorhov/restoran">
+                <div class="project-btn">Посмотреть</div>
+              </a>
+              <div class="project-btn-stack">
+                <a href="https://github.com/Nikolay-Gorhov/restoran">
+                  <img src="img/stack/gh.png" width="55" height="50" alt="">
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="project-img-js">
+            <a href="https://github.com/Nikolay-Gorhov/restoran">
+              <img class="project-2-img" src="img/js/color.png" alt="Что то не так с картинкой">
+            </a>
+          </div>
+
+        </div>
+        
+
+        <div id="changeText-content" class="project-2">
+          <div class="title-project">
+            <p class="stack-title-3">change Text</p>
+            <p class="stack-title-4">Сайт сделаннный по макету Figma c использованием html, css</p>
+          
+            <div class="project-button">
+              <a href="https://github.com/Nikolay-Gorhov/restoran">
+                <div class="project-btn">Посмотреть</div>
+              </a>
+              <div class="project-btn-stack">
+                <a href="https://github.com/Nikolay-Gorhov/restoran">
+                  <img src="img/stack/gh.png" width="55" height="50" alt="">
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="project-img-js">
+            <a href="https://github.com/Nikolay-Gorhov/restoran">
+              <img class="project-2-img" src="img/js/change-text.png" alt="Что то не так с картинкой">
+            </a>
+          </div>
+
+        </div>
+
+        
+        <!--  -->
+        
+        <div id="to-do-content" class="project-2">
+          <div class="title-project">
+            <p class="stack-title-3">to-do</p>
+            <p class="stack-title-4">Сайт сделаннный по макету Figma c использованием html, css</p>
+          
+            <div class="project-button">
+              <a href="https://github.com/Nikolay-Gorhov/restoran">
+                <div class="project-btn">Посмотреть</div>
+              </a>
+              <div class="project-btn-stack">
+                <a href="https://github.com/Nikolay-Gorhov/restoran">
+                  <img src="img/stack/gh.png" width="55" height="50" alt="">
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="project-img-js">
+            <a href="https://github.com/Nikolay-Gorhov/restoran">
+              <img class="project-2-img" src="img/js/to-do.png" alt="Что то не так с картинкой">
+            </a>
+          </div>
+
+        </div>
+        <div id="calculator-content" class="project-2">
+          <div class="title-project">
+            <p class="stack-title-3">calculator</p>
+            <p class="stack-title-4">Сайт сделаннный по макету Figma c использованием html, css</p>
+          
+            <div class="project-button">
+              <a href="https://github.com/Nikolay-Gorhov/restoran">
+                <div class="project-btn">Посмотреть</div>
+              </a>
+              <div class="project-btn-stack">
+                <a href="https://github.com/Nikolay-Gorhov/restoran">
+                  <img src="img/stack/gh.png" width="55" height="50" alt="">
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="project-img-js">
+            <a href="https://github.com/Nikolay-Gorhov/restoran">
+              <img class="project-2-img" src="img/js/calcul.png" alt="Что то не так с картинкой">
+            </a>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+
+
+
+  <script src="app.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
