@@ -174,3 +174,72 @@ document.querySelectorAll('.navigation .dropdown-menu a').forEach(link => {
     dropdownMenu.style.display = 'none';
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+const slides = document.querySelectorAll('.slide');
+const controls = document.querySelectorAll('.controls');
+
+let index = 0;
+
+slides.forEach(slide => {
+    slide.addEventListener('click', () => {
+        slides.forEach(s => s.classList.remove('active'));
+        slide.classList.add('active');
+        
+    });
+});
+
+
+
+function show(i) {
+    slides[index].classList.remove('active');
+    slides[i].classList.add('active');
+    index = i;
+}
+
+controls.forEach((control) => {
+    control.addEventListener('click', () => {
+        if (control.classList.contains('next')) {
+            let i = index + 1;
+            if (i >= slides.length) {
+                i = 0;
+            }
+            show(i);
+        } else if (control.classList.contains('prev')) {
+            let i = index - 1;
+            if (i < 0) {
+                i = slides.length - 1;
+            }
+            show(i);
+        }
+    });
+});
+
+show(index);
+
+
+
+
+// for (const slide of slides){
+//     slide.addEventListener("click", ()=>{
+//         nolActive()
+//         slide.classList.add('active')
+        
+//     })
+// }
+
+// function nolActive(){
+//     slides.forEach((slide) =>{
+//         slide.classList.remove('active')
+//     })
+// }
