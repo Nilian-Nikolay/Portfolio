@@ -3,38 +3,7 @@ function updateMaskHeight() {
   const maskedBackground = document.querySelector('.masked-background');
   maskedBackground.style.height = `${bodyHeight}px`;
 }
-
 window.onload = updateMaskHeight;
-
-
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   const stackItems = document.querySelectorAll('.stack-item');
-
-//   stackItems.forEach((item, index) => {
-//     item.addEventListener('mouseenter', () => {
-//       if (index > 0) { // Проверяем, есть ли предыдущий элемент
-//         stackItems[index - 1].classList.add('highlight-prev');
-//       }
-//       if (index < stackItems.length - 1) { // Проверяем, есть ли следующий элемент
-//         stackItems[index].classList.add('highlight-next');
-//       }
-//     });
-
-//     item.addEventListener('mouseleave', () => {
-//       if (index > 0) {
-//         stackItems[index - 1].classList.remove('highlight-prev');
-//       }
-//       if (index < stackItems.length - 1) {
-//         stackItems[index].classList.remove('highlight-next');
-//       }
-//     });
-//   });
-// });
-
-
-
 
 
 
@@ -78,16 +47,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
-
-
-
 // модальное окно
 let modal = document.getElementById("contactModal");
 let btn = document.getElementById("contactButton");
-
-// Получаем элемент <span>, который закрывает модальное окно
 let span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function() {
@@ -97,7 +59,6 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-//вне окна
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -108,35 +69,28 @@ window.onclick = function(event) {
 
 
 
-
-
 //pet-js
 function showContent(contentId, element) {
-  // Скрываем все элементы
   var contents = document.querySelectorAll('.project-2');
   contents.forEach(function(content) {
     content.style.display = 'none';
   });
 
-  // Показываем нужный элемент
   var showContent = document.getElementById(contentId);
   if (showContent) {
     showContent.style.display = 'flex';
   }
 
-  // Удаляем активный класс у всех кнопок
   var buttons = document.querySelectorAll('.btn-js');
   buttons.forEach(function(button) {
     button.classList.remove('active');
   });
 
-  // Добавляем активный класс к нажатой кнопке
   if (element) {
     element.classList.add('active');
   }
 }
 
-// Инициализация начального состояния
 document.addEventListener('DOMContentLoaded', function() {
   var initialButton = document.querySelector('.btn-js.slider');
   if (initialButton) {
@@ -174,29 +128,23 @@ function toggleDropdown() {
   dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
 }
 
-// Закрытие выпадающего меню при клике вне его области
+// Закрытие меню при клике вне
 document.addEventListener('click', function(event) {
   const dropdownMenu = document.querySelector('.navigation .dropdown-menu');
   const dropdownButton = document.getElementById('dropdownButton');
 
-  // Проверяем, что клик произошел вне области кнопки и меню
   if (!dropdownMenu.contains(event.target) && !dropdownButton.contains(event.target)) {
     dropdownMenu.style.display = 'none';
   }
 });
 
-// Закрытие выпадающего меню при клике на ссылку внутри меню
+// Закрытие при клике на ссылку
 document.querySelectorAll('.navigation .dropdown-menu a').forEach(link => {
   link.addEventListener('click', () => {
     const dropdownMenu = document.querySelector('.navigation .dropdown-menu');
     dropdownMenu.style.display = 'none';
   });
 });
-
-
-
-
-
 
 
 
@@ -217,14 +165,11 @@ slides.forEach(slide => {
     });
 });
 
-
-
 function show(i) {
     slides[index].classList.remove('active');
     slides[i].classList.add('active');
     index = i;
 }
-
 controls.forEach((control) => {
     control.addEventListener('click', () => {
         if (control.classList.contains('next')) {
@@ -245,19 +190,3 @@ controls.forEach((control) => {
 
 show(index);
 
-
-
-
-// for (const slide of slides){
-//     slide.addEventListener("click", ()=>{
-//         nolActive()
-//         slide.classList.add('active')
-        
-//     })
-// }
-
-// function nolActive(){
-//     slides.forEach((slide) =>{
-//         slide.classList.remove('active')
-//     })
-// }
