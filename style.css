@@ -59,11 +59,11 @@ a{
 }
 
 .navigation {
-  position: absolute; /* Позиционируем .navigation абсолютно относительно последнего родителя с position: relative, т.е. .hd-btn */
-  width: 100%; /* Чтобы .navigation занимала всю ширину кнопки */
-  top: 118%; /* Позиционируем непосредственно под кнопкой */
-  left: 35.5%; /* Выравниваем по левому краю кнопки */
-  z-index: 100000; /* Убедимся, что меню будет поверх других элементов */
+  position: absolute; 
+  width: 100%; 
+  top: 118%; 
+  left: 35.5%; 
+  z-index: 10000; 
 }
 
 .navigation .dropdown-menu {
@@ -74,16 +74,6 @@ a{
 
 
 
-/* .hd-btn:nth-child(7){
-  box-shadow: 0px -20px 90px 0px #00ff084d;
-}
-.hd-btn:nth-child(5){
-  box-shadow: 0px -20px 90px 0px #ff00556c;
-}
-.hd-btn:nth-child(3),   /*кнопка "Главная" 
-.hd-btn:nth-child(4){   /*кнопка "Обо мне" 
-  box-shadow: 0px -20px 90px 0px #fffb0065;
-} */
 
 
 .hd-btn:hover{
@@ -98,18 +88,6 @@ a{
 
 
 /* выпадающее меню */
-
-/* Стилизация кнопки и выпадающего меню */
-
-
-
-/* .navigation {
-  position: relative;
-  display: inline-block;
-}
-.navigation:hover .dropdown-menu {
-  display: block;
-} */
 
 .nav-button {
   padding: 10px;
@@ -146,7 +124,6 @@ a{
   border-radius: 30px;
 }
 
-/* Показать выпадающее меню при наведении */
 
 
 
@@ -177,7 +154,7 @@ a{
   font-weight: 800;
   text-align: center;
 
-  margin: 5% auto; /* 15% от верха и по центру */
+  margin: 5% auto; 
   padding: 20px;
   border: 3px solid #543275;
   border-radius: 30px;
@@ -257,8 +234,8 @@ a{
 }
 
 .title p {
-  margin-top: 5px; /* Уменьшаем верхний отступ */
-  margin-bottom: 5px; /* Уменьшаем нижний отступ */
+  margin-top: 5px; 
+  margin-bottom: 5px; 
 }
 .title-2 {
   text-align: right;
@@ -287,7 +264,7 @@ a{
 
 
 
-/* @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"); */
+
 
 .ring {
   /* margin-top: 140px; */
@@ -382,70 +359,6 @@ a{
   scale: 1.1;
   
 }
-/* .stack-items{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.stack-item {
-  position: relative; 
-  background-color: #fff;
-  border-radius: 100px;
-  width: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px;
-  z-index: 0;
-  
-}
-.stack-item:hover{
-  background-color: #663795;
-  color: #a27beb;
-  
-  transition: 0.2s;
-  z-index: 0;
-  box-shadow: 0 0 20px #77549b;
-
-}
-
-.stack-item.highlight-prev::after {
-  background-color: #77549b; 
-}
-
-.stack-item.highlight-next::after {
-  background-color: #77549b; 
-}
-
-.stack-item::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  width: 30vh; 
-  height: 2px;
-  background-color: #aaa9a94d;
-  z-index: -1;
-  transform-origin: left center; 
-  transition: background-color 0.1s ease-in-out;
-}
-
-.stack-item:nth-child(1)::after,
-.stack-item:nth-child(3)::after,
-.stack-item:nth-child(5)::after {
-  transform: rotate(41deg); 
-}
-.stack-item:nth-child(2)::after,
-.stack-item:nth-child(4)::after {
-  transform: rotate(-41deg); 
-}
-
-.stack-item:last-child::after {
-  display: none;
-} */
 
 .title-item{
   color: #000000;
@@ -572,16 +485,15 @@ a{
 }
 
 .carousel-item {
-  width: 50%; /* 100 / количество элементов */
+  width: 50%; 
   flex-shrink: 0;
-  flex-grow: 1; /* Карусель занимает всё доступное пространство между кнопками */
-  /* display: flex; */
+  flex-grow: 1; 
   transition: transform 0.5s ease;
 }
 
 .carousel-control-prev, 
 .carousel-control-next {
-  flex-shrink: 0; /* Кнопки не сжимаются и не растягиваются */
+  flex-shrink: 0; 
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -607,9 +519,9 @@ a{
 .geometric-shapes,
 .top-right {
   position: absolute;
-  top: 0;  /* Или другое значение, в зависимости от того, где вы хотите разместить фигуры */
-  right: 10;  /* Или другое значение */
-  z-index: 10; /* Убедитесь, что фигуры находятся над другими элементами */
+  top: 0;  
+  right: 10;  
+  z-index: 10; 
 }
 
 .svg{
@@ -687,8 +599,8 @@ a{
   transition: 0.1s;
 }
 .btn-js.active {
-  background-color: #7844ac; /* Измените цвет фона для активной кнопки */
-  color: rgb(255, 255, 255); /* Измените цвет текста для активной кнопки */
+  background-color: #7844ac; 
+  color: rgb(255, 255, 255); 
 }
 
 .project-2{
@@ -724,9 +636,6 @@ a{
 
 /*Крестик нолик*/
 
-/* * {  box-sizing: border-box;} */
-
-
 .tic-tac{
   /* background-image: url(tic-tac-fon.jpg);  */
   background-size: cover;
@@ -757,9 +666,7 @@ a{
   height: 80vh;
   width: 60%;
 }
-.tic-tac-navigation{
-  /* width: 70%; */
-}
+
 
 .slide{
   height: 80vh;
@@ -786,10 +693,9 @@ a{
   bottom: 20px;
   margin: 0;
   font-size: 3vh;
-  /* color: rgb(83, 75, 75); */
+
   color: #ffffff;
-  /* -webkit-text-stroke: 0.7px rgb(255, 255, 255); */
-  /* font-style: italic; */
+
   font-family: 'Montserrat Alternates', sans-serif;
 }
 .slide.active{  flex: 10; }
@@ -801,13 +707,13 @@ a{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #684f95; /* Любой цвет для затемнения, например, полупрозрачный черный */
+  background-color: #684f95; 
   border-radius: 20px;
   border: 3px solid #a27beb;
 }
 .slide.active h3{
   opacity: 1;
-  transition: opacity 0.3s ease-in; /*анимация: что анимируем, время, способ анимации*/
+  transition: opacity 0.3s ease-in; 
 }
 .gamepreview_window{  display: flex;align-items: center;}
 .gamepreview{
@@ -823,17 +729,7 @@ a{
 .start-tic-tac{
   display: block;
   margin: 30px;
-  /* text-align: center; */
-  /* text-decoration: none; */
-  /* padding: 10px; */
-  /* width: 150px; */
-  /* height: 50px; */
-  /* background-color: rgba(125, 183, 214, 0.506); */
-  /* border-radius: 15px; */
-  /* border: 2px solid rgb(255, 255, 255); */
-  /* color:white; */
-  /* font-size: 20px; */
-  /* cursor: pointer; */
+
 
   background-color: #65479e2d;
   border: 1px solid #9655d6;
@@ -919,6 +815,8 @@ footer{
   display: flex;
   justify-content: space-around;
   /* align-items: center; */
+  flex-wrap: wrap;
+  margin-right: 35px;
 }
 .conect{
   display: flex;
@@ -933,7 +831,7 @@ footer{
 }
 .poduct-name{
   text-align: center;
-  font-size: 1px;
+  /* font-size: 1px; */
 }
 
 
@@ -961,6 +859,10 @@ footer{
   right: -1%;
   /* opacity: 0.5; */
 }
+
+
+
+
 
 
 /*бургер*/
@@ -1159,6 +1061,13 @@ span:nth-child(3){
   }
 
 
+
+
+}
+@media (max-width: 550px) {
+  .footerColumn{
+    justify-content: flex-start;
+  }
 }
 @media (max-width: 800px) {
   .modal-content {
