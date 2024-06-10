@@ -145,6 +145,24 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+//не скролить экран если не мобильная версия 
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll('.dabble-js a'); 
+  const updateHref = () => {
+    links.forEach(link => {
+      if (window.innerWidth > 643) {
+        link.setAttribute('data-href', link.getAttribute('href'));
+        link.removeAttribute('href');
+      } else {
+        if (link.hasAttribute('data-href')) {
+          link.setAttribute('href', link.getAttribute('data-href'));
+        }
+      }
+    });
+  };
+  updateHref();
+  window.addEventListener('resize', updateHref);
+});
 
 
 
@@ -185,7 +203,7 @@ document.querySelectorAll('.navigation .dropdown-menu a').forEach(link => {
 
 
 
-
+//крестики нолики
 const slides = document.querySelectorAll('.slide');
 const controls = document.querySelectorAll('.controls');
 
